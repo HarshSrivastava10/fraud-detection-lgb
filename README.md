@@ -1,7 +1,13 @@
 # Fraud Detection System (LightGBM)
 
-## Overview
-Machine learning system for detecting fraudulent financial transactions using LightGBM.
+Fraud Detection in Financial Transactions
+-----------------------------------------
+
+## Live Demo:
+https://your-app-name.streamlit.app
+
+## Project Overview:
+Machine learning system that detects fraudulent financial transactions using transaction metadata and behavioral features.
 
 ## Features
 - Feature engineering for transaction behavior
