@@ -4,7 +4,7 @@ Fraud Detection in Financial Transactions
 -----------------------------------------
 
 ## Live Demo:
-https://your-app-name.streamlit.app
+https://fraud-detection-lightgb.streamlit.app/
 
 ## Project Overview:
 Machine learning system that detects fraudulent financial transactions using transaction metadata and behavioral features.
