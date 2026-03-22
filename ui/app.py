@@ -19,7 +19,7 @@ newbalanceDest = st.number_input("New Balance (Destination)", min_value=0.0)
 
 transaction_type = st.selectbox(
     "Transaction Type",
-    ["CASH_OUT", "TRANSFER", "PAYMENT", "DEBIT"]
+    ["CASH_IN", "CASH_OUT", "TRANSFER", "PAYMENT", "DEBIT"]
 )
 
 isFlaggedFraud = st.selectbox("System Flagged Fraud", [0,1])
@@ -32,8 +32,8 @@ type_DEBIT = 1 if transaction_type == "DEBIT" else 0
 
 # Feature engineering
 balance_diff_orig = oldbalanceOrg - newbalanceOrig
-balance_diff_dest = newbalanceDest - oldbalanceDest
-amount_balance_ratio_orig = amount / (oldbalanceOrg + 1)
+balance_diff_dest = oldbalanceDest - newbalanceDest
+amount_balance_ratio_orig = amount / (balance_diff_orig + 1)
 balance_error = (oldbalanceOrg - amount) - newbalanceOrig
 
 if st.button("Predict Fraud"):
